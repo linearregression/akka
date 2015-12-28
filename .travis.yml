@@ -13,7 +13,7 @@ scala:
    - 2.10.4
    - 2.11.2
 script:
-  - sbt scriptit
+  - sbt ++$TRAVIS_SCALA_VERSION test
   # Trick to avoid unnecessary cache updates
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
