@@ -9,8 +9,6 @@ branches:
 
 language: scala
 scala:
-   - 2.9.3
-   - 2.10.4
    - 2.11.2
 script:
   - sbt compile test -Dakka.parallelExecution=true -Dakka.test.tags.include=long-running,timing 
@@ -22,9 +20,6 @@ script:
 jdk:
   - oraclejdk8
   # - openjdk8 TravisCI is still working on this
-  - oraclejdk7
-  - openjdk7
-  - openjdk6
 
 matrix:
   exclude:
